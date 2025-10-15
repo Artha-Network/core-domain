@@ -1,0 +1,14 @@
+{
+  "name": "@trust-escrow/core-domain",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"(tests TBD)\""
+  },
+  "license": "MIT"
+}
