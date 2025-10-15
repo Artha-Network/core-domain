@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "prisma": "^6.17.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.17.1"
+  },
+  "scripts": {
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "seed": "ts-node src/seed.ts",
+    "db:test": "ts-node src/index.ts"
+  }
+}

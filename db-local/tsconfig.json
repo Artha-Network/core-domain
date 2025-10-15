@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* === File Paths === */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* === Environment Settings === */
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    /* === Output Options === */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* === Strict Type Checking === */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* === Quality / Compatibility === */
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
