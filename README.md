@@ -1,28 +1,24 @@
-# core-domain
-Pure TS domain types &amp; business helpers (no IO).
-
----
-```md
 # @trust-escrow/core-domain
 
-Pure TypeScript domain models & helpers. No I/O. Shared across services.
+Pure **TypeScript** domain models & helpers. **No I/O** (no DB, network, files).  
+Intended to be the **single source of truth** for deal lifecycle, evidence rules, and simple reputation.
 
-## Modules
-- `deal.ts`        — states, transitions, invariants
-- `dispute.ts`     — dispute lifecycle helpers
-- `evidence.ts`    — CID lists, size/type guards
-- `reputation.ts`  — simple scoring (v1)
+---
+
+## Modules (what’s inside)
+
+- `types.ts` — core types: branded IDs, `Amount`, `Deal`, `DealStatus`, tiny guards.
+- `deal.ts` — **state machine**: allowed transitions, `validateDeal`, `applyStatus`.
+- `evidence.ts` — evidence model + **policy guard** (`isEvidenceAcceptable`).
+- `reputation.ts` — **v1 heuristic** reputation score (0–100).
+- `errors.ts` — `DomainError` + stable error codes.
+
+> All functions are **pure** and deterministic. Consumers (API, UI, jobs, on-chain codegen) import from here.
+
+---
 
 ## Install
+
 ```bash
 pnpm add @trust-escrow/core-domain
-Usage
-import { isTransitionAllowed, DealStatus } from "@trust-escrow/core-domain/deal";
-
-if (!isTransitionAllowed(DealStatus.FUNDED, DealStatus.DISPUTED)) throw Error("bad");
-Tests
-Deterministic state transition table
-Property tests: no illegal transitions
-License
-
-MIT
+# or: npm i @trust-escrow/core-domain
