@@ -1,31 +1,31 @@
 {
-  // Published package name (scoped to your org)
+
   "name": "@trust-escrow/core-domain",
 
-  // Start at 0.x while APIs are still fluid
+ 
   "version": "0.0.1",
 
-  // ESM output for modern bundlers/runtimes
+
   "type": "module",
 
-  // SPDX license id
+
   "license": "MIT",
 
-  // Entry points that consumers import
-  "main": "dist/index.js",          // compiled JS
-  "types": "dist/index.d.ts",       // TypeScript declarations
 
-  // Only ship compiled output to npm
+  "main": "dist/index.js",          
+  "types": "dist/index.d.ts",       
+
+
   "files": ["dist"],
 
-  // Useful npm scripts for CI and local builds
+  
   "scripts": {
-    "build": "tsc -p tsconfig.json",          // compile src -> dist
-    "clean": "rm -rf dist",                    // remove build artifacts
-    "prepublishOnly": "npm run clean && npm run build" // ensure clean build before publish
+    "build": "tsc -p tsconfig.json",         
+    "clean": "rm -rf dist",                   
+    "prepublishOnly": "npm run clean && npm run build"
   },
 
-  // Dev-only dependencies for this package
+ 
   "devDependencies": {
     "typescript": "^5.6.0"
   }
