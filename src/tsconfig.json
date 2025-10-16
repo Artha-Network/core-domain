@@ -1,0 +1,23 @@
+{
+  // TypeScript compiler settings for a tiny, pure-TS library
+  "compilerOptions": {
+    // Modern JS target; fine for Node 18+/bundlers
+    "target": "ES2020",
+    // Keep ES modules so bundlers/tree-shakers work well
+    "module": "ES2020",
+
+    // Emit .d.ts types alongside JS into dist/
+    "declaration": true,
+
+    // Build output folder and source root
+    "outDir": "dist",
+    "rootDir": "src",
+
+    // Safer typing defaults
+    "strict": true,
+    "skipLibCheck": true
+  },
+
+  // Only compile files from src/
+  "include": ["src"]
+}
